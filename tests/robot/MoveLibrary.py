@@ -27,13 +27,13 @@ class MoveLibrary:
         end_x = self.controller.status.current_position.coordinates[0]
         if end_x != expected:
             raise AssertionError("%s != %s" % (end_x,expected))
-        # raise AssertionError("Not implemented")
 
     def character_yposition_should_be(self, expected):
         end_y = self.controller.status.current_position.coordinates[1]
         if end_y != expected:
             raise AssertionError("%s != %s" % (end_y,expected))
-        # raise AssertionError("Not implemented")
 
     def character_moveCount_should_be(self, expected):
-        raise AssertionError("Not implemented")
+        end_move_count = self.controller.status.move_count
+        if end_move_count != expected:
+            raise AssertionError("%s != %s" % (end_move_count,expected))
