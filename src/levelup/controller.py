@@ -29,6 +29,7 @@ class GameController:
         self.status = GameStatus()
         self.character = Character(DEFAULT_CHARACTER_NAME)
         self.map = GameMap()
+        # self.status.current_position = self.map.starting_position
 
     def start_game(self):
         if hasattr(self, "character"):
