@@ -6,7 +6,7 @@ Library           GameControllerLibrary.py
 
 *** Test Cases ***      providedCharacterName      characterName      numPositions     startingPositionX    startingPositionY  startingMoveCount
 Blank character name    ${EMPTY}                   Character          100              0                    0                  0
-
+Bob character name      Bob                        Bob                100              0                    0                  0
 
 *** Keywords ***
 Start new game with character
@@ -18,3 +18,9 @@ Start new game with character
     Starting X coordinate should be    ${startingPositionX}
     Starting Y coordinate should be    ${startingPositionY}
     Starting move count should be      ${startingMoveCount}
+
+*** Settings ***
+Documentation
+...     Example
+...     https://s3.amazonaws.com/levelup-program.com/images/level-up-header-logo.png
+...

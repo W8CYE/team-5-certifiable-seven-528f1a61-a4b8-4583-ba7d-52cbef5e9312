@@ -30,3 +30,9 @@ Move character
     Character xposition should be        ${endingX}
     Character yposition should be        ${endingY}
     Character moveCount should be        ${endingMoveCount}
+
+*** Settings ***
+Documentation
+...     Example
+...     https://s3.amazonaws.com/levelup-program.com/images/level-up-header-logo.png
+...
