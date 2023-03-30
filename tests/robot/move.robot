@@ -6,6 +6,11 @@ Library           MoveLibrary.py
 *** Test Cases ***         StartingX     StartingY     StartingMoveCount     Direction     EndingX     EndingY     EndingMoveCount
 Valid Case #1              0             0             1                     NORTH         0           1           2
 Invalid Case #2            0             0             5                     SOUTH         0           0           6
+Middle North               4             4             52                    NORTH         4           5           53
+Middle South               4             4             55                    SOUTH         4           3           56
+Middle East                4             4             58                    EAST          5           4           59
+Middle West                4             4             61                    WEST          3           4           62
+
 
 
 *** Keywords ***
