@@ -4,12 +4,12 @@ from levelup.character import Character, DEFAULT_CHARACTER_NAME, InvalidMoveExce
 from levelup.map import Direction, GameMap
 from levelup.position import Position
 
-
 @dataclass
 class GameStatus:
     move_count: int = 0
     running: bool = False
-    current_position: Position = None
+    character: Character = Character(DEFAULT_CHARACTER_NAME)
+    current_position: Position = Position(1,1)
 
     def __str__(self):
         return f"Moved {self.move_count} times, currently on position {self.current_position}"
@@ -25,7 +25,7 @@ class GameController:
 
     def __init__(self):
         self.status = GameStatus()
-        self.character = None
+        self.character = Character(DEFAULT_CHARACTER_NAME)
         self.map = GameMap()
 
     def start_game(self):
