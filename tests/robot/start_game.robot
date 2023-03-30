@@ -18,9 +18,3 @@ Start new game with character
     Starting X coordinate should be    ${startingPositionX}
     Starting Y coordinate should be    ${startingPositionY}
     Starting move count should be      ${startingMoveCount}
-
-*** Settings ***
-Documentation
-...     Example
-...     https://s3.amazonaws.com/levelup-program.com/images/level-up-header-logo.png
-...
