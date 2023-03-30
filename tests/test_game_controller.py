@@ -14,3 +14,28 @@ class TestGameController(TestCase):
             testobj.status.current_position,
             None,
         )
+
+    def test_create_default_chararacter(self):
+        testobj = GameController()
+        testobj.create_character("")
+        self.assertEqual(DEFAULT_CHARACTER_NAME,testobj.character.name)
+
+    def test_create_character(self):
+        testobj = GameController()
+        testobj.create_character("Bob")
+        self.assertEqual("Bob", testobj.character.name)
+
+    def test_start_game(self):
+        testobj = GameController()
+        testobj.start_game()
+        self.assertEqual(Position(0,0),testobj.character.position)
+
+        #self.assertNotEqual(testobj.status.current_position,None)
+
+    def test_set_character_position(self):
+        testobj = GameController()
+        testobj.set_character_position(Position(15,15))
+        self.assertEqual(Position(15,15),testobj.character.position)
+
+
+
