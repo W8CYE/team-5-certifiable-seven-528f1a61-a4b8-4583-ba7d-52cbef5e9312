@@ -26,6 +26,7 @@ class TestGameController(TestCase):
         self.assertEqual("Bob", testobj.character.name)
 
     def test_start_game(self):
+        print("test_start_game")
         testobj = GameController()
         testobj.start_game()
         self.assertEqual(Position(0,0),testobj.character.position)
