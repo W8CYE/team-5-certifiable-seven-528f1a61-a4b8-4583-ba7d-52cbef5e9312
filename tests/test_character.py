@@ -19,4 +19,11 @@ class TestCharacter(TestCase):
         testobj.enter_map(expected_map)
         self.assertEqual(testobj.map, expected_map)
         
-        # TODO: test position!
+    def test_move(self):
+        expected_map = FakeGameMap()
+        testobj = Character(None)
+        testobj.enter_map(expected_map)
+        testobj.position = Position(33,33)
+        testobj.move(Direction.NORTH)
+        self.assertEqual(str(testobj.position), str(Position(111,222)))
+

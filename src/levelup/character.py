@@ -20,5 +20,4 @@ class Character:
         self.map = game_map
 
     def move(self, direction: Direction):
-        pass
-    #
+        self.position = self.map.calculate_position(self.position, direction)
