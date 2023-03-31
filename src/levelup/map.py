@@ -32,7 +32,28 @@ class GameMap:
             return True
         return False
 
-    def calculate_position(
-        self, starting_position: Position, direction: Direction
-    ) -> Position:
-        pass
+    def calculate_position(self,
+     starting_position: Position, direction: Direction) -> Position:
+        x = starting_position.coordinates[0]
+        y = starting_position.coordinates[1]
+        print(str(x) + " : " + str(y))
+        print(direction)
+        if direction == Direction.NORTH:
+            print("NORTH")
+            y = y + 1
+        if direction == Direction.SOUTH:
+            print("SOUTH")
+            y = y - 1
+        if direction == Direction.EAST:
+            print("EAST")
+            x = x + 1
+        if direction == Direction.WEST:
+            print("WEST")
+            x = x - 1
+
+        new_position = Position(x, y)  
+
+        if self.is_valid_position(new_position):
+            return new_position
+
+        return starting_position
