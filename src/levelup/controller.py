@@ -43,7 +43,8 @@ class GameController:
         self.character = Character(character_name)
 
     def move(self, direction: Direction) -> None:
-        pass
+        self.character.move(direction)
+        self.status.move_count += 1
 
     def set_character_position(self, position: Position):
         self.character.position = position

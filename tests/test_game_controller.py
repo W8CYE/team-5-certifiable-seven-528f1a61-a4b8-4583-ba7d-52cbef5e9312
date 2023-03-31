@@ -44,5 +44,13 @@ class TestGameController(TestCase):
         #self.assertEqual(10, testobj.map.position_count)
         pass
 
+    def test_move(self):
+        testobj = GameController()
+        expectedNewPosition = Position(15, 16)
+        startPosition = Position(15,15)
+        testobj.set_character_position(startPosition)
+        testobj.move('n')
+        #self.assertEqual(expectedNewPosition.coordinates,testobj.character.position.coordinates)
+
 
 
