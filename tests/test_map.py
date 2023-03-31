@@ -5,8 +5,7 @@ from levelup.map import GameMap
 class TestMap(TestCase):
     def test_init(self):
         testobj = GameMap()
-        self.assertNotEqual(
-            testobj,
-            None,
+        self.assertGreater(
+            testobj.position_count,
+            1000,
         )
-
