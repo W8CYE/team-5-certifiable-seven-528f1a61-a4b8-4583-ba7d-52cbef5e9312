@@ -4,6 +4,7 @@ from levelup.controller import GameController, CharacterNotFoundException
 from levelup.character import DEFAULT_CHARACTER_NAME, InvalidMoveException, Character
 from levelup.map import Direction
 from levelup.position import Position
+from fake_character import FakeCharacter
 
 
 class TestGameController(TestCase):
@@ -46,11 +47,10 @@ class TestGameController(TestCase):
 
     def test_move(self):
         testobj = GameController()
-        expectedNewPosition = Position(15, 16)
-        startPosition = Position(15,15)
-        testobj.set_character_position(startPosition)
+        testobj.character = FakeCharacter()
+        testobj.status.move_count = 55
         testobj.move('n')
-        #self.assertEqual(expectedNewPosition.coordinates,testobj.character.position.coordinates)
+        self.assertEqual(testobj.status.move_count, 56)
 
 
 
